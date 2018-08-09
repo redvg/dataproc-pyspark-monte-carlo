@@ -14,4 +14,9 @@ gcloud dataproc clusters create my-cluster --zone us-central1-a \
 	--num-workers 2 --worker-machine-type n1-standard-1 \
 	--worker-boot-disk-size 50 --network=default \
 
-echo "creating cloud storage bucket"
+echo "copying py stuff to cloud storage bucket gs://$BUCKET/$FOLDER"
+
+gsutil -m cp *.py gs://$BUCKET/$FOLDER
+gsutil -m setmeta -h "Content-Type:text/plain" gs://$BUCKET/$FOLDER/*.py
+
+echo "done"
