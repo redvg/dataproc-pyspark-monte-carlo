@@ -16,7 +16,7 @@ gcloud dataproc clusters create mc-cluster --zone us-central1-a \
 
 echo "copying py stuff to cloud storage bucket gs://$BUCKET/$FOLDER"
 
-gsutil -m cp *.py gs://$BUCKET/$FOLDER
+gsutil -m cp *.py gs://$BUCKET/$FOLDER/
 gsutil -m setmeta -h "Content-Type:text/plain" gs://$BUCKET/$FOLDER/*.py
 
 echo "done"
