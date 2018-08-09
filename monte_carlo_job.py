@@ -61,6 +61,6 @@ path = seeds.map(create_path)
 
 path_result = path.reduce(add)
 
-average = path_result / NUMBER_OF_PATHS.
+average = path_result / float(NUMBER_OF_PATHS)
 
 print average
