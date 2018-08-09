@@ -64,3 +64,13 @@ path_result = path.reduce(add)
 average = path_result / float(NUMBER_OF_PATHS)
 
 print average
+
+print '2nd sim'
+
+average = sc.parallelize([time.time() + i for i in xrange(10000)])\
+            .map(create_path)\
+            .reduce(add)/float(NUMBER_OF_PATHS)
+
+print average
+
+print '+'
