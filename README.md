@@ -9,3 +9,4 @@ via cloud shell: \
 creates cluster, uploads job to bucket
 
 ## PySpark
+simulates portfolio growth under gaussian distribution
