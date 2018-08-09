@@ -23,7 +23,7 @@ def create_path(seed):
 
         growth = random.normalvariate(RETURN, STD_DEV)
 
-        portfolio_value += portfolio_value * growth + ANNUAL_INVESTMENT
+        portfolio_value += portfolio_value * growth + ANNUAL_INVESTMENT_BUMP
 
     return portfolio_value
 
